@@ -1,0 +1,15 @@
+#map1 {
+    height: 97vh;
+}
+
+#coords {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    z-index: 9999;
+    background-color: #f8f5f5;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
