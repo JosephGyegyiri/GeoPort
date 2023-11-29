@@ -71,10 +71,12 @@ var municipals_style = {
 // Wifi Layer style
 
 var wifi_style = {
-    color: 'red',
-    radius: 2,
-    fillColor: 'black',
-    weight: 1
+    radius: 5,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
 }
 
 var bus_stops_style = {
@@ -125,7 +127,7 @@ var wifi = L
         onEachFeature: function (feature, layer) {
             label= `City: ${feature.properties.CITY}<br>`
             label+= `Facility: ${feature.properties.FACILITY}<br>`
-            label+= `Department of Owner: ${feature.properties.DEPT}`
+            label+= `Department: ${feature.properties.DEPT}`
             
 
 
