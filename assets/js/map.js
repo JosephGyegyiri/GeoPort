@@ -121,6 +121,16 @@ var wifi = L
     .geoJson(Wifi, {
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, wifi_style);
+        },
+        onEachFeature: function (feature, layer) {
+            label= `City: ${feature.properties.CITY}<br>`
+            label+= `Facility: ${feature.properties.FACILITY}<br>`
+            label+= `Department of Owner: ${feature.properties.DEPT}`
+            
+
+
+            layer.bindPopup(label)
+            //layer.bindPopup(feature.properties.MUNINAME)
         }
     })
     .addTo(map);
